@@ -2,9 +2,10 @@ require 'spec_helper'
 
 describe BuildP::Build do
 	subject { BuildP::Build.new(status) }
-	let(:status) { %Q{<Project name="my-project"/>} }
+	let(:status) { %Q{<Project name="my-project" lastBuildStatus="Success"/>} }
 
 	its(:name) { should == 'my-project' }
+	its(:to_s) { should == 'my-project: Success!' }
 
 	describe 'passing' do
 		let(:status) { %Q{<Project name="my-project" lastBuildStatus="Success" activity="Sleeping"/>} }

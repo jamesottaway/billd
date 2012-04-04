@@ -16,5 +16,9 @@ module BuildP
 			outcome = :building if @status[%Q{activity="Building"}]
 			outcome
 		end
+
+		def to_s
+			"#{name}: #{outcome.to_s.capitalize}!"
+		end
 	end
 end
