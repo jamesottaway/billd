@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe BuildP::Build do
 	subject { BuildP::Build.new(status) }
-	let(:status) { %Q{<Project name="my-project" lastBuildStatus="Success" activity="Sleeping"/>} }
+	let(:status) { %Q{<Project name="my-project"/>} }
 
 	its(:name) { should == 'my-project' }
 
