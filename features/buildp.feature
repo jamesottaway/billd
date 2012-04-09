@@ -37,7 +37,7 @@ Feature: BuildP
       </Projects>
       """
     When I run `buildp build.xml`
-    Then the exit status should be 1
+    Then the exit status should be 0
     And the stdout should contain:
       """
       my-project: Failure!
