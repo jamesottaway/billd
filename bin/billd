@@ -4,6 +4,6 @@ require 'rubygems'
 
 $:.unshift File.dirname(__FILE__)+'/../lib'
 
-require 'buildp'
+require 'billd'
 
-BuildP::Cli.new(ARGV).execute
+Billd::Cli.new(ARGV).execute

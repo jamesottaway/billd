@@ -1,4 +1,4 @@
-Feature: BuildP
+Feature: Billd
 
   Scenario:
     Given a file named "build.xml" with:
@@ -10,7 +10,7 @@ Feature: BuildP
         <Project name="failed-project" lastBuildStatus="Failure" activity="Sleeping"/>
       </Projects>
       """
-    When I run `buildp build.xml`
+    When I run `billd build.xml`
     And the stdout should contain:
       """
       successful-project: Success!

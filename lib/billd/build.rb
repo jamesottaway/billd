@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-module BuildP
+module Billd
 	class Build
 		def initialize status
 			@status = status

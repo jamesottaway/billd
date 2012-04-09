@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "buildp/version"
+require "billd/version"
 
 Gem::Specification.new do |s|
-  s.name        = "buildp"
-  s.version     = BuildP::VERSION
+  s.name        = "billd"
+  s.version     = Billd::VERSION
   s.authors     = ["James Ottaway"]
   s.email       = ["james@ottaway.mp"]
   s.homepage    = ""
   s.summary     = %q{It parses builds}
   s.description = %q{For those times when you need to control something based on the status of your build}
 
-  s.rubyforge_project = "buildp"
+  s.rubyforge_project = "billd"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

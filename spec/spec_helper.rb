@@ -1,6 +1,6 @@
 $: << File.join(File.dirname(__FILE__), '..')
 
-require 'buildp'
+require 'billd'
 
 require 'rubygems'
 require 'rspec'

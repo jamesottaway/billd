@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe BuildP::Build do
-	subject { BuildP::Build.new(status) }
+describe Billd::Build do
+	subject { Billd::Build.new(status) }
 	let(:status) { %Q{<Project name="my-project" lastBuildStatus="Success"/>} }
 
 	its(:name) { should == 'my-project' }
