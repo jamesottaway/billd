@@ -1,3 +1,5 @@
+require 'billd/parser'
+
 module Billd
 	class Cli
 		def self.execute args

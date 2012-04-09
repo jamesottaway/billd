@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'billd/build'
 
 describe Billd::Build do
 	subject { Billd::Build.new(status) }

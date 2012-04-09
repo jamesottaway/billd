@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'billd/parser'
 
 describe Billd::Parser do
 	let(:build1) { mock 'Build' }

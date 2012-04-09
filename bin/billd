@@ -4,6 +4,6 @@ require 'rubygems'
 
 $:.unshift File.dirname(__FILE__)+'/../lib'
 
-require 'billd'
+require 'billd/cli'
 
 Billd::Cli.execute(ARGV)

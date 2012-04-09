@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'billd/cli'
 
 describe Billd::Cli do
 	let(:uri) { '//build/status' }

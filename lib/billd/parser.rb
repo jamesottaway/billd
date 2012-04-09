@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'billd/build'
 
 module Billd
 	class Parser
