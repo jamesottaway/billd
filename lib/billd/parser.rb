@@ -2,7 +2,7 @@ require 'nokogiri'
 
 module Billd
 	class Parser
-		def parse uri
+		def self.parse uri
 			source = Kernel.open(uri).read
 			xml = Nokogiri.parse source
 			projects = xml.elements.first

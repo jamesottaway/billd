@@ -11,7 +11,7 @@ describe Billd::Parser do
 	let(:statuses) { "<Projects>#{status1}#{status2}#{status3}</Projects>" }
 	let(:stream) { mock 'File', :read => statuses }
 
-	subject { Billd::Parser.new.parse(uri) }
+	subject { Billd::Parser.parse(uri) }
 
 	before { Kernel.should_receive(:open).with(uri).and_return(stream) }
 	before { Billd::Build.should_receive(:new).with(status1).and_return(build1) }
