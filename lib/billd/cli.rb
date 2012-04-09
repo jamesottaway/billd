@@ -5,7 +5,7 @@ module Billd
 		def self.execute args
 			uri = args.shift
 			builds = Billd::Parser.parse(uri)
-			puts builds.map { |build| build.to_s }.join "\n"
+			STDOUT.puts builds.map { |build| build.to_s }.join "\n"
 		end
 	end
 end
