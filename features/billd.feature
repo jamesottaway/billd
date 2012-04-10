@@ -11,11 +11,11 @@ Feature: Billd
       </Projects>
       """
     When I run `billd build.xml`
-    And the stdout should contain:
+    Then the stdout should contain:
       """
       successful-project: Success!
       building-from-success-project: Building!
       building-from-failure-project: Building!
       failed-project: Failure!
       """
-    Then the exit status should be 0
+    And the exit status should be 0
