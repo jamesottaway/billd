@@ -11,14 +11,14 @@ module Billd
 		end
 
 		def outcome
-			outcome = :success
-			outcome = :failure if @status[%Q{lastBuildStatus="Failure"}]
-			outcome = :building if @status[%Q{activity="Building"}]
+			outcome = :success!
+			outcome = :failure! if @status[%Q{lastBuildStatus="Failure"}]
+			outcome = :building! if @status[%Q{activity="Building"}]
 			outcome
 		end
 
 		def to_s
-			"#{name}: #{outcome.to_s.capitalize}!"
+			"#{name}: #{outcome.to_s.capitalize}"
 		end
 	end
 end

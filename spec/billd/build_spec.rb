@@ -10,21 +10,21 @@ describe Billd::Build do
 
 	describe 'passing' do
 		let(:status) { %Q{<Project name="my-project" lastBuildStatus="Success" activity="Sleeping"/>} }
-		its(:outcome) { should == :success }
+		its(:outcome) { should == :success! }
 	end
 
 	describe 'failing' do
 		let(:status) { %Q{<Project name="my-project" lastBuildStatus="Failure" activity="Sleeping"/>} }
-		its(:outcome) { should == :failure }
+		its(:outcome) { should == :failure! }
 	end
 
 	describe 'building from success' do
 		let(:status) { %Q{<Project name="my-project" lastBuildStatus="Success" activity="Building"/>} }
-		its(:outcome) { should == :building }
+		its(:outcome) { should == :building! }
 	end
 
 	describe 'building from failure' do
 		let(:status) { %Q{<Project name="my-project" lastBuildStatus="Failure" activity="Building"/>} }
-		its(:outcome) { should == :building }
+		its(:outcome) { should == :building! }
 	end
 end
