@@ -1,16 +1,7 @@
 Feature: Billd
 
   Scenario:
-    Given a file named "build.xml" with:
-      """
-      <Projects>
-        <Project name="successful-project" lastBuildStatus="Success" activity="Sleeping"/>
-        <Project name="building-from-success-project" lastBuildStatus="Success" activity="Building"/>
-        <Project name="building-from-failure-project" lastBuildStatus="Failure" activity="Building"/>
-        <Project name="failed-project" lastBuildStatus="Failure" activity="Sleeping"/>
-      </Projects>
-      """
-    When I run `billd build.xml`
+    When I run `billd https://raw.github.com/gist/b08579f1a271913bec33/a3d6ab315397f8fec5c8ab05bcf45c93606a4e88/build.xml`
     Then the stdout should contain:
       """
       successful-project: Success!

@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'billd/build'
+require 'open-uri'
 
 module Billd
 	class Parser
