@@ -75,6 +75,7 @@ Features I may add in the future:
 * Support for other build status formats (Travis, TeamCity, Bamboo, etc.)
 * Remove dependency on Nokogiri
 * Support for other elements in the CruiseControl output format
+* Read arguments from a file rather than STDIN
 
 ### Meta
 
