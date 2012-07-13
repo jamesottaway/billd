@@ -32,6 +32,28 @@ If we then give this URL to `billd`, we'll find ourselves very well informed.
 
 But that only helps from your shell of choice. What about in your Ruby project?
 
+First, add `billd` to your `Gemfile`:
+
+    source 'https://rubygems.org'
+    
+    # ...
+    gem 'billd'
+    # ...
+
+Or add `billd` to your gemspec:
+
+    Gem::Specification.new do |gem|
+      # ...
+      gem.add_runtime_dependency 'billd'
+      #...
+    end
+
+Or just go crazy and install it directly:
+
+    ~  ᐅ gem install billd
+
+You're now ready to rock and/or roll:
+
     require 'billd/status'
 
     status = Billd::Status.new 'http://build/status.xml'
